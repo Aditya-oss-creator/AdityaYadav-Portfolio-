@@ -1,0 +1,115 @@
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.section {
+  padding: 5rem 0;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.btn {
+  cursor: pointer;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+  font-family: inherit;
+}
+.btn:hover {
+  background: var(--green-tint);
+  box-shadow: var(--shadow-3);
+}
+.highlight {
+  color: var(--green);
+  position: relative;
+  white-space: nowrap;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  border-radius: 4px;
+  width: 0;
+  transition: var(--transition);
+  background-color: var(--green);
+}
+.highlight:hover::after {
+  width: 100%;
+}
+.section-title {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.section-line {
+  width: 100%;
+  height: 1px;
+  background: var(--slate);
+  opacity: 0.2;
+}
+.section-img {
+  position: relative;
+  transition: var(--transition);
+  max-width: 400px;
+  object-fit: cover;
+  justify-self: center;
+}
+
+.section-img img {
+  border-radius: var(--borderRadius);
+  object-fit: cover;
+  height: 500px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.325;
+  background-color: var(--blue);
+  border-radius: var(--borderRadius);
+  transition: var(--transition-3);
+}
+.overlay:hover {
+  opacity: 0;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.325;
+  border-radius: var(--borderRadius);
+  transition: var(--transition-3);
+}
+
+.section-img::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(15px, 15px);
+  border: 2px solid var(--green);
+  z-index: -1;
+  border-radius: var(--borderRadius);
+  transition: var(--transition);
+}
+
+.section-img:hover::before {
+  transform: translate(10px, 10px);
+}
